@@ -8,8 +8,8 @@ def get_book_text(filepath):
 def main():
     filepath = "./books/frankenstein.txt"
     content = get_book_text(filepath)
-    get_word_count(content)
-    get_char_count(content)
+    print(f"Found {get_word_count(content)} total words")
+    print(get_char_count(content))
 
 if __name__ == '__main__':
     main()
