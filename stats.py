@@ -13,13 +13,6 @@ def sort_by_count(char_count):
     sorted_char_count.sort(reverse=True, key=sort_on)
     return sorted_char_count
 
-def print_sorted_count(book_content):
-    sorted_count = sort_by_count(char_count=get_char_count(book_content))
-    for item in sorted_count:
-        print(f"{item["char"]}: {item["num"]}")
-    pass
-        
-
 def get_char_count(book_content):
     char_count = {}
     for char in book_content:
@@ -32,3 +25,9 @@ def get_char_count(book_content):
             char_count[char] += 1
     return char_count
 
+
+def print_sorted_count(book_content):
+    sorted_count = sort_by_count(char_count=get_char_count(book_content))
+    for item in sorted_count:
+        print(f"{item['char']}: {item['num']}")
+    pass
